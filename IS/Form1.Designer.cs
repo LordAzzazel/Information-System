@@ -36,8 +36,8 @@
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выдатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выданныеЭкземлярыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выдатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.читателиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.карточкаЧитателяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регистрацияЧитателяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,9 +63,9 @@
             this.table_1TableAdapter = new IS.DBDataSetTableAdapters.Table_1TableAdapter();
             this.table_1TableAdapter1 = new IS.DBDataSet1TableAdapters.Table_1TableAdapter();
             this.table_2TableAdapter = new IS.DBDataSet3TableAdapters.Table_2TableAdapter();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_2TableAdapter1 = new IS.DBDataSet4TableAdapters.Table_2TableAdapter();
             this.table_2TableAdapter2 = new IS.DBDataSet5TableAdapters.Table_2TableAdapter();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2BindingSource2)).BeginInit();
@@ -114,8 +114,8 @@
             this.добавитьToolStripMenuItem,
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem,
-            this.выдатьToolStripMenuItem,
-            this.выданныеЭкземлярыToolStripMenuItem});
+            this.выданныеЭкземлярыToolStripMenuItem,
+            this.выдатьToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.справкаToolStripMenuItem.Text = "Книги";
@@ -141,17 +141,19 @@
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
-            // выдатьToolStripMenuItem
-            // 
-            this.выдатьToolStripMenuItem.Name = "выдатьToolStripMenuItem";
-            this.выдатьToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.выдатьToolStripMenuItem.Text = "Выдать";
-            // 
             // выданныеЭкземлярыToolStripMenuItem
             // 
             this.выданныеЭкземлярыToolStripMenuItem.Name = "выданныеЭкземлярыToolStripMenuItem";
             this.выданныеЭкземлярыToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.выданныеЭкземлярыToolStripMenuItem.Text = "Выданные экземляры";
+            this.выданныеЭкземлярыToolStripMenuItem.Click += new System.EventHandler(this.выданныеЭкземлярыToolStripMenuItem_Click);
+            // 
+            // выдатьToolStripMenuItem
+            // 
+            this.выдатьToolStripMenuItem.Name = "выдатьToolStripMenuItem";
+            this.выдатьToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.выдатьToolStripMenuItem.Text = "Выдать книгу";
+            this.выдатьToolStripMenuItem.Click += new System.EventHandler(this.выдатьToolStripMenuItem_Click);
             // 
             // читателиToolStripMenuItem
             // 
@@ -197,6 +199,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(586, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // button1
             // 

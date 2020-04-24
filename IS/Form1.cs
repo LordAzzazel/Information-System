@@ -44,7 +44,6 @@ namespace IS
             SDA.Fill(dt);
             dataGridView1.DataSource = dt;
             sqlConnection.Close();
-            MessageBox.Show("Something changed");
         }
 
         private void карточкаЧитателяToolStripMenuItem_Click(object sender, EventArgs e)
@@ -83,6 +82,32 @@ namespace IS
         {
             sqlConnection.Close();
             Application.Exit();
+        }
+
+        private void выдатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GiveBook fr7 = new GiveBook();
+            fr7.Show();
+        }
+
+        private void выданныеЭкземлярыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookInfo fr8 = new BookInfo();
+            fr8.Show();
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select * From TABLE_2 WHERE Наименование LIKE ('" + textBox1.Text +"')";
+            cmd.ExecuteNonQuery();
+            DataTable DT = new DataTable();
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DA.Fill(DT);
+            dataGridView1.DataSource = DT;
+            sqlConnection.Close();
         }
     }
 }

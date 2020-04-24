@@ -37,7 +37,21 @@ namespace IS
             SDA.Fill(dt);
             dataGridView1.DataSource = dt;
             sqlConnection.Close();
-            MessageBox.Show("Something changed");
+
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select * From READERS WHERE Имя LIKE ('" + textBox1.Text + "')";
+            cmd.ExecuteNonQuery();
+            DataTable DT = new DataTable();
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DA.Fill(DT);
+            dataGridView1.DataSource = DT;
+            sqlConnection.Close();
         }
     }
 }

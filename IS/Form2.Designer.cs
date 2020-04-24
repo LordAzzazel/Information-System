@@ -42,8 +42,6 @@
             this.readersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBDataSet2 = new IS.DBDataSet2();
             this.readersTableAdapter = new IS.DBDataSet2TableAdapters.ReadersTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.readersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSet2)).BeginInit();
@@ -70,6 +68,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(520, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // button1
             // 
@@ -101,7 +100,7 @@
             this.dataGridView1.DataSource = this.readersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(-1, 32);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(712, 377);
+            this.dataGridView1.Size = new System.Drawing.Size(712, 421);
             this.dataGridView1.TabIndex = 5;
             // 
             // номерБилетаDataGridViewTextBoxColumn
@@ -154,31 +153,11 @@
             // 
             this.readersTableAdapter.ClearBeforeFill = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(546, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Выбрать";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(627, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Отмена";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -212,7 +191,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn датаРожденияDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
     }
 }

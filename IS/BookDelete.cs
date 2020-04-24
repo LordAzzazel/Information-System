@@ -36,7 +36,7 @@ namespace IS
                 SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
                 SDA.SelectCommand.ExecuteNonQuery();
                 sqlConnection.Close();
-                MessageBox.Show("DELETED");
+                MessageBox.Show("Книга удалена");
                 Close();
             }
             else

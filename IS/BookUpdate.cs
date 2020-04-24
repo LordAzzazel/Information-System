@@ -23,6 +23,7 @@ namespace IS
             string connectionString = @"Data Source=DESKTOP-8U3BM7L\SQLEXPRESS;Initial Catalog=DB;Integrated Security=True";
             sqlConnection = new SqlConnection(connectionString);
             label7.Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace IS
                 SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
                 SDA.SelectCommand.ExecuteNonQuery();
                 sqlConnection.Close();
-                MessageBox.Show("Inserted Succsesfuly");
+                MessageBox.Show("Данные изменены");
                 Close();
             }
             else

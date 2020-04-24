@@ -39,7 +39,7 @@ namespace IS
                 SqlDataAdapter SDA = new SqlDataAdapter(query, sqlConnection);
                 SDA.SelectCommand.ExecuteNonQuery();
                 sqlConnection.Close();
-                MessageBox.Show("Inserted Succsesfuly");
+                MessageBox.Show("Книга добавлена");
                 Close();
             }
             else
