@@ -124,6 +124,8 @@
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GiveBook";
             this.Text = "Выдать книгу";
             this.Load += new System.EventHandler(this.GiveBook_Load);
