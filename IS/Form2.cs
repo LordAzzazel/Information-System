@@ -23,7 +23,7 @@ namespace IS
         {
             // TODO: This line of code loads data into the 'dBDataSet2.Readers' table. You can move, or remove it, as needed.
             this.readersTableAdapter.Fill(this.dBDataSet2.Readers);
-            string connectionString = @"Data Source=DESKTOP-8U3BM7L\SQLEXPRESS;Initial Catalog=DB;Integrated Security=True";
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=DB;Integrated Security=True";
             sqlConnection = new SqlConnection(connectionString);
             
         }

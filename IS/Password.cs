@@ -13,7 +13,7 @@ namespace IS
 {
     public partial class Password : Form
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-8U3BM7L\SQLEXPRESS;Initial Catalog=DB;Integrated Security=True");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB;Integrated Security=True");
 
         public Password()
         {

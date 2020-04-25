@@ -28,7 +28,7 @@ namespace IS
 
 
 
-            string connectionString = @"Data Source=DESKTOP-8U3BM7L\SQLEXPRESS;Initial Catalog=DB;Integrated Security=True";
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=DB;Integrated Security=True";
 
             sqlConnection = new SqlConnection(connectionString);
 
