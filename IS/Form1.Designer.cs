@@ -67,6 +67,7 @@
             this.table_2TableAdapter1 = new IS.DBDataSet4TableAdapters.Table_2TableAdapter();
             this.table_2TableAdapter2 = new IS.DBDataSet5TableAdapters.Table_2TableAdapter();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.удалениеЧитателяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2BindingSource2)).BeginInit();
@@ -160,7 +161,8 @@
             // 
             this.читателиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.карточкаЧитателяToolStripMenuItem,
-            this.регистрацияЧитателяToolStripMenuItem});
+            this.регистрацияЧитателяToolStripMenuItem,
+            this.удалениеЧитателяToolStripMenuItem});
             this.читателиToolStripMenuItem.Name = "читателиToolStripMenuItem";
             this.читателиToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.читателиToolStripMenuItem.Text = "Читатели";
@@ -330,6 +332,13 @@
             // 
             this.table_2TableAdapter2.ClearBeforeFill = true;
             // 
+            // удалениеЧитателяToolStripMenuItem
+            // 
+            this.удалениеЧитателяToolStripMenuItem.Name = "удалениеЧитателяToolStripMenuItem";
+            this.удалениеЧитателяToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.удалениеЧитателяToolStripMenuItem.Text = "Удаление читателя";
+            this.удалениеЧитателяToolStripMenuItem.Click += new System.EventHandler(this.удалениеЧитателяToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +415,7 @@
         private DBDataSet5 dBDataSet5;
         private System.Windows.Forms.BindingSource table2BindingSource2;
         private DBDataSet5TableAdapters.Table_2TableAdapter table_2TableAdapter2;
+        private System.Windows.Forms.ToolStripMenuItem удалениеЧитателяToolStripMenuItem;
     }
 }
 

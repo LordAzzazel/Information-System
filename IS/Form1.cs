@@ -109,5 +109,11 @@ namespace IS
             dataGridView1.DataSource = DT;
             sqlConnection.Close();
         }
+
+        private void удалениеЧитателяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chitatelDelete fr9 = new chitatelDelete();
+            fr9.Show();
+        }
     }
 }
